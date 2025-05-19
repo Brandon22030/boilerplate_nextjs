@@ -277,29 +277,6 @@ Avant de contribuer :
 4. Documentez votre code
 5. Ajoutez des tests si nécessaire
 
-## 🧪 Tests
-
-Pour exécuter les tests :
-```bash
-npm test
-```
-
-Pour exécuter les tests en mode watch :
-```bash
-npm run test:watch
-```
-
-Pour générer le rapport de couverture :
-```bash
-npm run test:coverage
-```
-
-Pour plus de détails sur la structure et les bonnes pratiques des tests, consultez la [documentation détaillée des tests](./docs/testing.md).
-
-## 🚀 Déploiement
-
-Le projet est prêt pour le déploiement sur Vercel. Assurez-vous d'avoir configuré toutes les variables d'environnement nécessaires.
-
 ## 📝 Conventions
 
 - Utilisez TypeScript pour tous les nouveaux fichiers
