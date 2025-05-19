@@ -170,6 +170,56 @@ export function Component({ props }: ComponentProps) {
 
 ## 📚 Documentation
 
+### 📚 Zustand
+Zustand est une bibliothèque légère et performante pour la gestion d'état global dans vos applications React/Next.js. Elle offre :
+
+- **Simplicité**
+  - API minimaliste et facile à comprendre
+  - Pas de boilerplate complexe
+  - Performances optimisées
+
+- **Installation**
+```bash
+npm install zustand
+```
+
+- **Exemple d'utilisation**
+```typescript
+// Création d'un store
+import create from 'zustand'
+
+interface CounterStore {
+  count: number
+  increment: () => void
+  decrement: () => void
+}
+
+export const useCounterStore = create<CounterStore>((set) => ({
+  count: 0,
+  increment: () => set((state) => ({ count: state.count + 1 })),
+  decrement: () => set((state) => ({ count: state.count - 1 })),
+}))
+
+// Utilisation dans un composant
+function Counter() {
+  const { count, increment, decrement } = useCounterStore()
+  return (
+    <div>
+      <button onClick={decrement}>-</button>
+      <span>{count}</span>
+      <button onClick={increment}>+</button>
+    </div>
+  )
+}
+```
+
+- **Avantages**
+  - Taille minuscule (seulement 3.5KB)
+  - Pas de dépendances externes
+  - Support natif de TypeScript
+  - Facile à tester
+  - Intégration simple avec React
+
 ### 📚 React Query
 React Query (TanStack Query) est une bibliothèque essentielle pour la gestion des données dans votre application. Elle offre :
 
@@ -243,6 +293,8 @@ Pour générer le rapport de couverture :
 ```bash
 npm run test:coverage
 ```
+
+Pour plus de détails sur la structure et les bonnes pratiques des tests, consultez la [documentation détaillée des tests](./docs/testing.md).
 
 ## 🚀 Déploiement
 

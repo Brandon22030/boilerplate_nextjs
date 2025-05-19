@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import { useTheme } from "next-themes";
 import { useQuery } from "@tanstack/react-query";
+import { Counter } from "./Counter";
 
 interface User {
   id: number;
@@ -71,6 +72,11 @@ export function Demo() {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
               />
+            </div>
+
+            <div>
+              <h3 className="font-semibold mb-2">Compteur (Zustand)</h3>
+              <Counter />
             </div>
           </div>
         </CardContent>
